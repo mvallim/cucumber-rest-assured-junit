@@ -10,7 +10,7 @@ import cucumber.api.junit.Cucumber;
 @CucumberOptions(
     snippets = SnippetType.CAMELCASE,
     strict = true,
-    plugin = "pretty",
+    plugin = {"pretty", "junit:target/junit-search-movie-test.xml", "json:target/search-movie-test.json"},
     features = "classpath:feature",
     glue = "com.omdbapi.bdd.steps")
 public class SearchMovieTest {
